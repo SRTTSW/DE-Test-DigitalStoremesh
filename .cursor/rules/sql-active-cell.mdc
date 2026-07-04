@@ -1,0 +1,50 @@
+---
+description: >
+  Currently active SQL notebook cell. Use this to scope edits to the correct
+  cell block. Do NOT modify other cells unless explicitly asked.
+globs:
+  - "**/*.sql"
+  - "**/*.sqlnb"
+alwaysApply: false
+---
+
+# Active Cell Context
+
+**File:** `d:\Test\exploration.sql`  
+**Cell:** 6 of 6  
+**Connection:** None  
+
+
+## Current Cell SQL (Cell 6)
+
+```sql
+-- ---------------------------------------------------------------------
+-- 5. ORDERS: Missing / NULL currency
+-- ---------------------------------------------------------------------
+SELECT *
+FROM vw_raw_orders
+WHERE currency IS NULL OR TRIM(currency) = ''
+```
+
+## Available Variables
+
+_None defined_
+
+## Surrounding Cells
+
+**Previous cell (5):**
+```sql
+-- phone numbers containing letters
+-- ---------------------------------------------------------------------
+-- 4. ORDERS: total_amount ค่าเป็น 0 หรือตืดลบ
+-- --------------------------------------…
+```
+
+_No next cell_
+
+## Editing Rules
+
+- Only edit **Cell 6** unless explicitly asked to change another cell
+- Preserve `-- %%` cell boundary markers when editing
+- Preserve `-- @var` and `-- @connection` directives
+- Use `{{variableName}}` syntax to reference defined variables
